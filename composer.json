@@ -1,5 +1,5 @@
 {
-    "name": "EntropyFactory/dfnder.php.sdk",
+    "name": "dfnder/dfnder.php.sdk",
     "description": "dfnder.com php SDK, symfony compatible",
     "license": "proprietary",
     "type": "project",
