@@ -15,16 +15,8 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class DfnderService {
 
-    private $requestStack;
-
-    /**
-     * DfnderService constructor.
-     * @param $requestStack RequestStack
-     */
-    public function __construct(RequestStack $requestStack)
-    {
-        $this->requestStack = $requestStack;
+    public function sayHello($name){
+        return "Hello, " . $name;
     }
-
 
 }
