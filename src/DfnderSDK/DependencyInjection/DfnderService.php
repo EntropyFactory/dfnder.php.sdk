@@ -9,14 +9,15 @@
 
 namespace DfnderSDK\DependencyInjection;
 
+use DfnderSDK\CardProcessing\CardProcessor;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 
-class DfnderService {
+interface DfnderService {
 
-    public function sayHello($name){
-        return "Hello, " . $name;
-    }
-
+    /**
+     * @return CardProcessor
+     */
+    function getCardProcessor();
 }
