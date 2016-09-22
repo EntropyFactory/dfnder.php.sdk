@@ -4,5 +4,3 @@ parameters:
 #    parameter_name: value
 
 services:
-    dfnder.card_processor:
-        class: DfnderSDK\DependencyInjection\DfnderService
