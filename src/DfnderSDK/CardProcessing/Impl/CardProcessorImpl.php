@@ -36,9 +36,13 @@ class CardProcessorImpl implements CardProcessor {
     function getCardsFromRequest(Request $request)
     {
         $cards = [];
-        foreach ($request->headers->all() as $header) {
-            $cards []= $header;
+        $i = 0;
+        while($request->headers->has('x-dfnder-token-' . $i)){
+            $token = $request->headers->get('x-dfnder-token-' . $i);
+            $tokenType = $request->headers->get('x-dfnder-token-' . $i++ . '-type');
+            $cards []= new CardImpl("", "", "", $tokenType, $token);
         }
+
         return $cards;
     }
 
